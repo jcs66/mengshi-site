@@ -21,6 +21,18 @@
     background: radial-gradient(circle at 38% 35%, #fdf6dd, #e8d9a0 70%, #d9c078);
     box-shadow: 0 0 60px 18px rgba(240, 220, 150, .22);
   }
+  nav {
+    position: absolute; top: 0; left: 0; right: 0;
+    display: flex; justify-content: center; gap: 2.6rem;
+    padding: 1.4rem 1rem;
+    font-size: .92rem; letter-spacing: .3em;
+  }
+  nav a {
+    color: #8b93a7; text-decoration: none;
+    transition: color .22s cubic-bezier(0.23,1,0.32,1), opacity .22s cubic-bezier(0.23,1,0.32,1);
+  }
+  nav a:hover { color: #e8d9a0; }
+  nav a.here { color: #f2ecd9; border-bottom: 1px solid #c8a94e; padding-bottom: .25rem; }
   main { text-align: center; padding: 2rem; position: relative; z-index: 1; }
   h1 {
     font-size: clamp(3.4rem, 11vw, 6.5rem);
@@ -29,16 +41,34 @@
   }
   .latin { margin-top: .6rem; letter-spacing: .55em; font-size: .8rem; color: #8b93a7; text-transform: uppercase; }
   .verse { margin-top: 2.6rem; font-size: clamp(1rem, 3.4vw, 1.25rem); line-height: 2.1; color: #c9c2ae; }
+  .entries { margin-top: 2.8rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .entries a {
+    color: #e8e4d8; text-decoration: none;
+    border: 1px solid #39415a; border-radius: 10px;
+    padding: .85rem 1.7rem; letter-spacing: .2em; font-size: .95rem;
+    background: rgba(27, 39, 69, .35);
+    transition: transform .22s cubic-bezier(0.23,1,0.32,1), border-color .22s cubic-bezier(0.23,1,0.32,1);
+  }
+  .entries a:hover { transform: translateY(-2px); border-color: #c8a94e; }
   .meta { margin-top: 3.2rem; font-size: .78rem; color: #5f6578; letter-spacing: .12em; line-height: 1.9; }
   .dot { color: #c8a94e; }
 </style>
 </head>
 <body>
   <div class="moon"></div>
+  <nav>
+    <a class="here" href="index.html">首页</a>
+    <a href="poems.html">诗页</a>
+    <a href="about.html">关于</a>
+  </nav>
   <main>
     <h1>梦诗</h1>
     <div class="latin">MengShi · de5.net</div>
     <p class="verse">梦里拾句，醒时成诗。<br>这是我的第一个域名，安放一些慢慢写的东西。</p>
+    <div class="entries">
+      <a href="poems.html">去读诗 →</a>
+      <a href="about.html">关于本站 →</a>
+    </div>
     <p class="meta">mengshi.de5.net <span class="dot">·</span> DNS 托管于 Cloudflare <span class="dot">·</span> 2026-10-31 点亮</p>
   </main>
 </body>
